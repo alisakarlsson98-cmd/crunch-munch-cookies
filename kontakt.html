@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Viewport gör att formuläret funkar bra även på mobil -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CRUNCH MUNCH COOKIES</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="Bilder/Favicon.png">
+</head>
+
+<body>
+
+<header class="header">
+    <div class="logo">
+        <img src="Bilder/Logotyp.png" alt="Crunch Munch Cookies logga">
+    </div>
+
+    <nav class="nav">
+        <a class="nav-btn" href="index.html">HEM</a>
+        <a class="nav-btn" href="omoss.html">OM OSS</a>
+        <a class="nav-btn" href="menu.html">MENY</a>
+        <a class="nav-btn" href="kontakt.html">KONTAKT</a>
+        <a class="nav-btn" href="jobbahososs.html">JOBBA HOS OSS</a>
+    </nav>
+</header>
+
+<main class="container">
+    <!-- Vi samlar hela kontaktdelen i en egen section så den är lätt att styla separat -->
+    <section class="kontakt-page">
+
+        <h1 class="kontakt-title">Kontakta oss</h1>
+
+        <p class="kontakt-lead">
+            Vill du beställa kakor eller har du en fråga? Fyll i formuläret så återkommer vi!
+        </p>
+
+        <!-- Form + kontaktinfo ligger i samma wrapper för att kunna placeras bredvid varandra i CSS -->
+        <div class="kontakt-layout">
+
+            <!-- leder till nekräftelsesida efter man klickar skicka -->
+            <form class="kontakt-form" action="bekraftelse.html" method="get">
+
+                <!-- Grunduppgifter ligger tillsammans eftersom de behövs oavsett ärende -->
+                <div class="form-grid">
+
+                    <div class="form-field">
+                        <!-- Label kopplas till input via for/id så det blir tydligt + mer tillgängligt -->
+                        <label for="namn">Namn *</label>
+                        <!-- required gör att man inte kan skicka tomt namn -->
+                        <input id="namn" name="namn" type="text" placeholder="Ditt namn" required>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="email">E-post *</label>
+                        <!-- type="email" hjälper webbläsaren att kolla att e-post ser rimlig ut -->
+                        <input id="email" name="email" type="email" placeholder="din@email.com" required>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="tel">Telefon</label>
+                        <!-- Telefon är frivilligt, därför inget required -->
+                        <input id="tel" name="tel" type="tel" placeholder="070 123 45 67">
+                    </div>
+
+                    <div class="form-field">
+                        <label for="amne">Ämne</label>
+                        <input id="amne" name="amne" type="text" placeholder="Vad gäller det?">
+                    </div>
+
+                </div>
+
+                <!-- Checkboxar används här eftersom man kan välja flera alternativ samtidigt -->
+                <fieldset class="form-fieldset">
+                    <legend>Vad vill du kontakta oss om?</legend>
+
+                    <label class="check">
+                        <input type="checkbox" name="arende[]" value="bestallning">
+                        <span>Beställning</span>
+                    </label>
+
+                    <label class="check">
+                        <input type="checkbox" name="arende[]" value="allergier">
+                        <span>Allergier / ingredienser</span>
+                    </label>
+
+                    <label class="check">
+                        <input type="checkbox" name="arende[]" value="jobb">
+                        <span>Jobba hos oss</span>
+                    </label>
+
+                    <label class="check">
+                        <input type="checkbox" name="arende[]" value="ovrigt">
+                        <span>Övrigt</span>
+                    </label>
+                </fieldset>
+
+                <!-- Radioknappar används här eftersom man bara ska kunna välja ett sätt -->
+                <fieldset class="form-fieldset">
+                    <legend>Hur vill du bli kontaktad?</legend>
+
+                    <!-- checked gör att ett standardval redan är valt (så man inte missar detta) -->
+                    <label class="radio">
+                        <input type="radio" name="kontaktvag" value="email" checked>
+                        <span>E-post</span>
+                    </label>
+
+                    <label class="radio">
+                        <input type="radio" name="kontaktvag" value="telefon">
+                        <span>Telefon</span>
+                    </label>
+                </fieldset>
+
+                <!-- Textarea används för längre fritext, t.ex. vid specialbeställningar -->
+                <div class="form-field">
+                    <label for="meddelande">Meddelande *</label>
+                    <textarea id="meddelande" name="meddelande" rows="6" placeholder="Skriv ditt meddelande..." required></textarea>
+                </div>
+
+                <!-- Submit-knappen skickar formuläret -->
+                <button class="kontakt-btn" type="submit">Skicka</button>
+                <p class="form-note">* obligatoriska fält</p>
+            </form>
+
+            <!-- Kontaktinfo ligger bredvid formuläret så den är lätt att hitta direkt -->
+            <aside class="kontakt-info">
+                <h2>Kontaktuppgifter</h2>
+
+                <div class="info-block">
+                    <p><strong>Öppettider</strong></p>
+                    <p>Mån-Fre 09:00-17:00</p>
+                </div>
+
+                <div class="info-block">
+                    <p><strong>E-post</strong></p>
+                    <!-- mailto gör att man kan klicka och öppna sin e-post direkt -->
+                    <p><a href="mailto:info@crunchmunchcookies.com">info@crunchmunchcookies.com</a></p>
+                </div>
+
+                <div class="info-block">
+                    <p><strong>Telefon</strong></p>
+                    <!-- tel-länk gör att det går att ringa direkt på mobil -->
+                    <p><a href="tel:+46701234567">070 123 45 67</a></p>
+                </div>
+
+                <div class="info-block">
+                    <p><strong>Adress</strong></p>
+                    <!-- br används här för att skriva adress i flera rader. -->
+                    <p>Crunch Munch Cookies<br>Galagatan 29<br>Stockholm, Sverige</p>
+                </div>
+            </aside>
+
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <p class="kontakt-titel"><strong>KONTAKTA OSS</strong></p>
+    <p>E-post: info@crunchmunchcookies.com </p>
+    <p>Telefon: 070 123 45 67 </p>
+    <p>Adress: Galagatan 29, Stockholm</p>
+    <p><a href="https://www.instagram.com" target="_blank" rel="noopener">
+        Följ oss på Instagram </a></p>
+</footer>
+
+</body>
+</html>
+

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CRUNCH MUNCH COOKIES</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="Bilder/Favicon.png">
+</head>
+
+<!-- body har egen klass här för att kunna ha meny-specifik styling i CSS -->
+<body class="menu-page">
+
+<header class="header">
+    <div class="logo">
+        <img src="Bilder/Logotyp.png" alt="Crunch Munch Cookies logga">
+    </div>
+
+    <nav class="nav">
+        <a class="nav-btn" href="index.html">HEM</a>
+        <a class="nav-btn" href="omoss.html">OM OSS</a>
+        <a class="nav-btn" href="menu.html">MENY</a>
+        <a class="nav-btn" href="kontakt.html">KONTAKT</a>
+        <a class="nav-btn" href="jobbahososs.html">JOBBA MED OSS</a>
+    </nav>
+</header>
+
+<main class="container">
+    <h1>Våra kakor</h1>
+
+    <!-- Varje cookies-row är en “rad” i menyn (2 kort per rad) -->
+    <div class="cookies-row">
+
+        <!-- Varje cookie-card är ett produktkort: bild + info -->
+        <div class="cookie-card">
+            <!-- data-info används av JS för att visa allergener -->
+            <div class="image-box cookie-info" data-info="Allergener: Gluten (vete), Mjölk, Ägg">
+                <img src="Bilder/choclatechip.jpg" alt="Kaka 1">
+            </div>
+
+            <div class="cookie-info">
+                <h2 class="cookie-name"> Chocolate Chip Cookie</h2>
+                <p class="cookie-price">39 kr</p>
+                <p class="cookie-desk">En klassisk cookie bakad med smör, socker, vetemjöl och ägg, fylld med bitar av choklad. 
+                               Krispig på utsidan, mjuk i mitten och full av härlig crunch i varje tugga.</p>
+            </div>
+        </div>
+
+        <div class="cookie-card">
+            <div class="image-box cookie-info" data-info="Allergener: Gluten (vete), Mjölk, Ägg">
+                <img src="Bilder/gingerbread%20cookie.png" alt="Kaka 2">
+            </div>
+
+            <div class="cookie-info">
+                <h2 class="cookie-name">Gingerbread Cookie</h2>
+                <p class="cookie-price">45 kr</p>
+                <p class="cookie-desk"> En handgjord gingerbread cookie bakad med smör, socker, vetemjöl och en balanserad mix av kryddor, toppad med len glasyr. 
+                                Krispig i kanterna, mjuk i mitten och med en varm, rund kryddighet som passar året om.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="cookies-row">
+
+        <div class="cookie-card">
+            <div class="image-box cookie-info" data-info="Allergener: Gluten (vete), Mjölk, Ägg, Nötter">
+                <img src="Bilder/Macadamia%20cookie.jpg" alt="Kaka 3">
+            </div>
+
+            <div class="cookie-info">
+                <h2 class="cookie-name"> Macadamia Cookie</h2>
+                <p class="cookie-price">45 kr</p>
+                <p class="cookie-desk">En handgjord cookie bakad med smör, socker, vetemjöl, krämiga macadamianötter och len vit choklad.
+                               Krispig på utsidan, mjuk i mitten och med en lyxigt söt och nötig smak i varje tugga.</p>
+            </div>
+        </div>
+
+        <div class="cookie-card">
+            <div class="image-box cookie-info" data-info="Allergener: Gluten (vete), Mjölk, Ägg">
+                <img src="Bilder/oatmeal%20cookie.jpg" alt="Kaka 4">
+            </div>
+
+            <div class="cookie-info">
+                <h2 class="cookie-name">Oatmeal Cookie</h2>
+                <p class="cookie-price">39 kr</p>
+                <p class="cookie-desk">En handgjord cookie med generösa havregryn som ger en segare, mer mättande textur. 
+                               Mild sötma, lätt rostig smak och en hembakad känsla som gör den perfekt när du vill ha något mindre sött.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="cookies-row">
+
+        <div class="cookie-card">
+            <div class="image-box cookie-info" data-info="Allergener: Gluten (vete), Mjölk, Ägg, Nötter">
+                <img src="Bilder/Seeded%20cookie.jpg" alt="Kaka 5">
+            </div>
+
+            <div class="cookie-info">
+                <h2 class="cookie-name">Seeded Cookie</h2>
+                <p class="cookie-price">39 kr</p>
+                <p class="cookie-desk">En handgjord cookie bakad med smör, socker och vetemjöl, fylld med en blandning av frön som ger extra crunch och en lätt nötig smak.
+                               Mindre söt och full av textur för dig som vill ha något annorlunda.</p>
+            </div>
+        </div>
+
+        <div class="cookie-card">
+            <div class="image-box cookie-info" data-info="Allergener: Gluten (vete), Mjölk, Ägg">
+                <img src="Bilder/shortbread%20cookies.jpg" alt="Kaka 6">
+            </div>
+
+            <div class="cookie-info">
+                <h2 class="cookie-name">Shortbread Cookie</h2>
+                <p class="cookie-price">35 kr</p>
+                <p class="cookie-desk">En handgjord shortbread cookie bakad med mycket smör, socker och vetemjöl för en spröd konsistens som smälter i munnen.
+                               Finns som klassisk plain eller med frisk citronsmak för en lätt och uppfriskande twist.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Avslutande knapp för beställning (hör ihop med menyn) -->
+    <section class="ending">
+        <h2> Vill du beställa?</h2>
+        <p>Hör av dig så fixar vi en box med dina favoriter.
+            Perfekt till fika, kalas eller bara en mysig kväll.
+        </p>
+        <a class="ending-btn" href="kontakt.html">Kontakta oss</a>
+    </section>
+</main>
+
+<footer class="footer">
+    <p class="kontakt-titel">KONTAKTA OSS</p>
+    <p>E-post: info@crunchmunchcookies.com </p>
+    <p>Telefon: 070 123 45 67 </p>
+    <p>Adress: Galagatan 29, Stockholm</p>
+      <p> <a href="https://www.instagram.com" target="_blank" rel="noopener">
+        Följ oss på Instagram </a></p>
+</footer>
+
+<!-- Script laddas sist för att sidan ska hinna ladda HTML innan JS körs -->
+<script src="script.js"></script>
+
+</body>
+</html>
+

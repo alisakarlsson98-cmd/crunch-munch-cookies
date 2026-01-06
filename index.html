@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Titel i fliken. Gör det tydligt vilken sida man är på. -->
+    <title>CRUNCH MUNCH COOKIES</title>
+
+    <!-- CSS ligger separat för att HTML bara ska vara struktur/innehåll. -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Favicon för igenkänning i fliken/bokmärken. -->
+    <link rel="icon" type="image/png" href="Bilder/Favicon.png">
+</head>
+
+<body>
+
+<!-- Header används högst upp på sidan.
+    Vi har logga + meny här eftersom det är samma upplägg på flera sidor.-->
+<header class="header">
+
+    <!-- Loggan ligger i en egen div så den går att placera enkelt med CSS. -->
+    <div class="logo">
+        <img src="Bilder/Logotyp.png" alt="Crunch Munch Cookies logga" loading="lazy">
+    </div>
+
+    <!-- Navigationen ligger i ett nav-element för tydlig struktur.
+        Varje länk leder till en egen sida/sektion på webbplatsen.-->
+    <nav class="nav">
+        <a class="nav-btn" href="index.html">HEM</a>
+        <a class="nav-btn" href="omoss.html">OM OSS</a>
+        <a class="nav-btn" href="menu.html">MENY</a>
+        <a class="nav-btn" href="kontakt.html">KONTAKT</a>
+        <a class="nav-btn" href="jobbahososs.html">JOBBA MED OSS</a>
+    </nav>
+</header>
+
+<!-- Bildsektion med två bilder.
+     Syftet är att ge ett snabbt visuellt intryck direkt när man kommer in på sidan.-->
+<div class="images">
+    <div class="image-box">
+        <img src="Bilder/conor-brown-H1uISjlRXJE-unsplash.jpg" alt="Cookie på tallrik" loading="lazy">
+    </div>
+
+    <div class="image-box">
+        <img src="Bilder/pexels-conojeghuo-375904.jpg" alt="Närbild på cookies" loading="lazy">
+    </div>
+</div>
+
+<!-- Main innehåller sidans huvuddel.
+     Detta gör det tydligt vad som är sidans viktigaste innehåll. -->
+<main class="container">
+
+    <!-- Introduktionstexten ligger i en section så den hålls ihop som en tydlig del.
+         Vi använder flera p-taggar för att få tydliga stycken och bra läsbarhet.-->
+    <section class="welcome">
+
+        <!-- H1 är sidans huvudrubrik. -->
+        <h1>Välkommen till<br>Crunch Munch Cookies</h1>
+
+        <p>Vad roligt att vi får träffa varandra här! </p>
+
+        <p>Vi brinner för kvalitet och för att skapa en upplevelse som speglar vår passion. 
+            Vår ambition är att erbjuda kreativa produkter som känns lika bra som de smakar, det är alltid vårt fokus.
+            Hos oss hittar du noggrant utvalda cookies, skapade med erfarenhet och med kundens upplevelse i centrum.</p>
+
+        <p>Du är varmt välkommen att utforska vårt sortiment, lära känna oss och tveka inte att höra av dig om du har frågor eller önskar en specialbeställning.
+           Vi vill vara en självklar del av ditt hem och hoppas att du ska känna dig som hemma hos oss.</p>
+
+        <p>Våra cookies passar alla tillfällen, från möhippa till babyshower, från födelsedag till bröllop, och från lunchlådan till julbordet.</p>
+
+        <p>Varmt välkommen till Crunch Munch Cookies!</p>
+        <p>Varje detalj räknas, och varje känsla är viktig.</p>
+    </section>
+
+</main>
+
+<!-- Footer ligger längst ner och samlar kontaktuppgifter på ett ställe.
+    Det gör att man alltid kan hitta kontaktinfo oavsett var på sidan man är.-->
+<footer class="footer">
+    <p class="kontakt-titel">KONTAKTA OSS</p>
+    <p>E-post: info@crunchmunchcookies.com </p>
+    <p>Telefon: 070 123 45 67 </p>
+    <p>Adress: Galagatan 29, Stockholm</p>
+    <p> <a href="https://www.instagram.com" target="_blank" rel="noopener">
+        Följ oss på Instagram </a></p>
+</footer>
+
+</body>
+</html>
+
+
