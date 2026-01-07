@@ -523,8 +523,9 @@ footer a:hover {
   transform: translateY(-2px);
 }
 
-/* Mobil: kontakt blir en kolumn och formuläret blir en kolumn. */
-@media (max-width: 900px) {
+/* Här är huvudbrytpunkten för mindre skärmar. Så vid 700px blir layouten för
+trång i flera kolumner. Här staplas då innehållet i en kolumn för bättre läsbarhet. */
+@media (max-width: 700px) {
   .kontakt-layout {
     grid-template-columns: 1fr;
   }
@@ -534,8 +535,9 @@ footer a:hover {
   }
 }
 
-/* Mobil: menyn bryts och bilderna hamnar under varandra. */
-@media (max-width: 700px) {
+/* vid mindre skärmar kommer textstorleken, marginaler och menyer att justeras 
+så det får bättre plats.*/
+@media (max-width: 500px) {
   .nav {
     flex-wrap: wrap;
     gap: 10px;
